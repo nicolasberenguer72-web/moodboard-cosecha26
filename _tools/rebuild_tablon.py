@@ -66,6 +66,7 @@ plantilla = open(os.path.join(BASE, "_tools", "plantilla_tablon.html")).read()
 html = plantilla.replace("__DATA__", json.dumps(items))
 out = os.path.join(BASE, "moodboard_cosecha26.html")
 open(out, "w").write(html)
+open(os.path.join(BASE, "index.html"), "w").write(html)  # raiz para Vercel
 json.dump(estado, open(os.path.join(BASE, "tablon_estado.json"), "w"), indent=1, ensure_ascii=False)
 print(f"tablón regenerado: {len(items)} fotos | {sum(1 for i in items if i['real'])} enmarcadas | "
       f"{round(os.path.getsize(out)/1e6, 2)} MB")
