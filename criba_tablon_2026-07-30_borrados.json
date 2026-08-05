@@ -1,0 +1,40 @@
+{
+ "proyecto": "cosecha26_tablon_borrados",
+ "items": [
+  {
+   "familia": "07_glam_electrico",
+   "archivo": "11_michael-jackson-history-tour-gold-pants-.jpg",
+   "estado": "fuera"
+  },
+  {
+   "familia": "11_cantopop_hk",
+   "archivo": "01_anita-mui-1980s-concert-stage-costume-ph.jpg",
+   "estado": "fuera"
+  },
+  {
+   "familia": "10_postsovietico",
+   "archivo": "v4_01_new-russians-1990s-party-fur-gold-photog.jpg",
+   "estado": "fuera"
+  },
+  {
+   "familia": "13_barroco_tecnico",
+   "archivo": "v4_01_kapital-kountry-lookbook-styled-models.png",
+   "estado": "fuera"
+  },
+  {
+   "familia": "14_carnaval",
+   "archivo": "11_fellini-casanova-1976-film-still-costume.jpg",
+   "estado": "fuera"
+  },
+  {
+   "familia": "04_movida_almodovar",
+   "archivo": "14_kika-almodovar-vestuario-jean-paul-gault.jpg",
+   "estado": "fuera"
+  },
+  {
+   "familia": "10_postsovietico",
+   "archivo": "v4_04_post-soviet-fashion-editorial-fur-hat-go.jpg",
+   "estado": "fuera"
+  }
+ ]
+}

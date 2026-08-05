@@ -1,0 +1,863 @@
+[
+ {
+  "fam": "02_barroco_gitano",
+  "file": "v5_01_camaron-de-la-isla-camisa-floral-oros.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_camaron.png"
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_lola-flores-actuacion-television-plumas-.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "05_sapeurs-brazzaville-elegance-portrait-ph.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "11_cantopop_hk",
+  "file": "v4_02_anita-mui-bad-girl-stage-costume.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "11_cantopop_hk",
+  "file": "fav_kowloon-nathan-road-neon-signs-1980s-nig.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "fav_david-bowie-diamond-dogs-1974-eyepatch.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "15_prince-purple-rain-1984-stage-ruffles-ph.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_prince.png"
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "05_mick-rock-david-bowie-ziggy-stardust-pho.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "05_dictador_chic",
+  "file": "v4_02_mobutu-leopard-skin-hat-portrait.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "13_barroco_tecnico",
+  "file": "02_kapital-japan-lookbook-eric-kvatek-photo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "13_barroco_tecnico",
+  "file": "03_kapital-japan-lookbook-eric-kvatek-photo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "13_barroco_tecnico",
+  "file": "v4_05_ibuki-kapital-lookbook.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "v5_02_new-romantic-gen-z-bomber-blanco.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_newromantic.png"
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "13_lil-peep-pink-hair-face-tattoos-portrait.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "15_vivienne-westwood-pirate-collection-1981.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_westwood.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_gucci-michele-glasses-rings-brocade-stre.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "08_tropical",
+  "file": "v5_01_brazil-funk-baroque-neon-dragones.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_brazilfunk.png"
+ },
+ {
+  "fam": "08_tropical",
+  "file": "fav_carnaval-rio-headdress-feathers-costume-.jpg",
+  "port": false,
+  "fav": false,
+  "real": true,
+  "png": "real_rio.png"
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_diablo-congo-mascara-roja.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_diablo_congo.png"
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_diablos-congo-calle.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "fav_noble-qing-seda.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "fav_hassan-ii-isabel-ii-sofa-floral.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "03_goyesco_semana_santa",
+  "file": "fav_goya-la-cometa-completa.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "v4_07_qing-dynasty-emperor-court-portrait.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_reina-congo-retrato-bn.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "v5_01_playboi-carti-gen-z-glam-stripes.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_carti.png"
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "15_lil-peep-pink-hair-face-tattoos-portrait.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_sopranos-furio-chaleco-bordado.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_furio.png"
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_de-niro-casino-traje-amarillo.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco367.png"
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_sopranos-adriana-animal-print.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "fav_sophie-musician-chrome-aesthetic.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_sophie.png"
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "07_dorian-electra-flamboyant-press-photo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "03_goyesco_semana_santa",
+  "file": "fav_goya-el-pelele.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco244.png"
+ },
+ {
+  "fam": "03_goyesco_semana_santa",
+  "file": "fav_goya-la-cometa.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_cometa.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "v5_01_joaquin-sabina-bombin-rayas-dandi.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_sabina.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_gucci-alessandro-michele-runway-maximali.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "14_vivienne-westwood-pirate-collection-1981.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_cristina-garcia-rodero-espa-a-oculta-rom.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_lita-cabellut-flores.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "03_masayoshi-sukita-david-bowie-photograph.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_sukita.png"
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "02_masayoshi-sukita-david-bowie-photograph.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "06_alberto-garcia-alix-retrato-movida-madri.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_garcia-alix.png"
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "fav_alaska-movida-madrile-a-a-os-80.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco259.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "12_gucci-alessandro-michele-campaign-glen-l.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_gucci_glen.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_sapeurs-brazzaville-la-sape-suits.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "v4_05_haile-selassie-coronation-robes-photo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_vivienne-westwood-pirate-collection-1981.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "fav_maharaja-perlas-turbante.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "fav_amazigh-tocado-monedas-bn.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "08_gered-mankowitz-jimi-hendrix-military-ja.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_hendrix.png"
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "fav_michael-jackson-military-jacket-gold-his.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "v5_02_dolly-parton-western-glam-encaje-rosa.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_pollera-congo-baile-rosa.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_desfile-congo-polleras.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "fav_elton-john-dodger-stadium-1975-sequin.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_elton.png"
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "06_terry-o-neill-elton-john-dodger-stadium.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "fav_beatles-sgt-pepper-satin-uniforms.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "v4_02_tim-walker-fashion-editorial-baroque-mod.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "10_annie-leibovitz-vogue-versailles-editori.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "fav_baroque-court-dress-17th-century-portrai.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_corte.png"
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "09_pablo-perez-minguez-fotografia-movida-al.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "v4_02_fabio-mcnamara-movida-retrato.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_fabio.png"
+ },
+ {
+  "fam": "14_carnaval",
+  "file": "10_fellini-casanova-1976-film-still-costume.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "14_carnaval",
+  "file": "07_david-bowie-ashes-to-ashes-video-pierrot.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco368.png"
+ },
+ {
+  "fam": "14_carnaval",
+  "file": "v4_01_il-casanova-di-fellini-1976-donald-suthe.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_cavalli-baroque-pintura.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco867.png"
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "14_dolce-gabbana-alta-moda-gold-embroidery-.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_roberto-cavalli-campana-floral.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "11_annie-leibovitz-vogue-versailles-editori.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "v6_02_westwood-punk-trash-editorial.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "11_cantopop_hk",
+  "file": "fav_glam-asiatico-70s-pendiente-identificar.png",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "11_cantopop_hk",
+  "file": "06_leslie-cheung-1997-concert-jean-paul-gau.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "05_colita-fotografia-flamenco-lola-flores.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "03_ruven-afanador-mil-besos-flamenco-photog.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_lita-cabellut-gitana.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "fav_post-soviet-pasarela-medallas.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_medallas.png"
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "fav_post-soviet-abrigo-barroco-verde.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "v4_03_post-soviet-fashion-editorial-fur-hat-go.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_carmencita-bailaora-pintura.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_rosalia-el-mal-querer-pienso-en-tu-mira.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_falete-anillos-oro.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_falete.png"
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "v4_02_new-russians-1990s-party-fur-gold-photog.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "fav_new-russian-abrigo-pelo-getty.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_newrussian.png"
+ },
+ {
+  "fam": "10_postsovietico",
+  "file": "v4_06_russian-90s-wedding-limousine-photograph.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_rey-congo-muralla-portobelo-watermark.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_rey-congo-tambor.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "16_congo_portobelo",
+  "file": "fav_joven-congo-corona-bn.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "v4_02_david-lachapelle-lil-kim-versace-logo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "v4_01_david-lachapelle-lil-kim-versace-logo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "12_y2k_hyperpop",
+  "file": "03_david-lachapelle-saturated-baroque-celeb.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "03_goyesco_semana_santa",
+  "file": "04_cristina-garcia-rodero-semana-santa-proc.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "03_goyesco_semana_santa",
+  "file": "15_goya-maja-vestida-prado-painting.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "v5_01_infanta-isabel-clara-eugenia-magdalena-ruiz.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_infanta.png"
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "v6_04_vivienne-westwood-plumas-closeup.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "01_corte_y_jardin",
+  "file": "02_tim-walker-vogue-baroque-editorial-photo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "11_gucci-alessandro-michele-campaign-glen-l.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "05_dictador_chic",
+  "file": "v4_06_gaddafi-rome-2009-photo-pinned-on-unifor.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "05_dictador_chic",
+  "file": "05_gaddafi-gold-braid-ceremony-photograph.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "05_dictador_chic",
+  "file": "fav_gaddafi-sunglasses-robes-portrait.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_gadafi.png"
+ },
+ {
+  "fam": "14_carnaval",
+  "file": "v4_02_il-casanova-di-fellini-1976-donald-suthe.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "14_carnaval",
+  "file": "v4_03_il-casanova-di-fellini-1976-donald-suthe.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "15_royal_glam",
+  "file": "fav_haile-selassie-capa.jpg",
+  "port": false,
+  "fav": false,
+  "real": true,
+  "png": "real_selassie.png"
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "fav_bambino-guitarristas-bn.jpg",
+  "port": true,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "02_ruven-afanador-mil-besos-flamenco-photog.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "02_ouka-leele-fotografia-coloreada-limon.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "marco409.png"
+ },
+ {
+  "fam": "04_movida_almodovar",
+  "file": "08_pablo-perez-minguez-fotografia-movida-al.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_gucci-michele-campaign-perros.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "fav_julian-schnabel-dandi-pintor.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "real_schnabel.png"
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "fav_dolce-gabbana-baroque-gold-runway-sicily.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "06_mafia_flamboyante",
+  "file": "06_richard-avedon-versace-campaign-1990s.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "08_tropical",
+  "file": "08_carmen-miranda-1940s-studio-portrait.jpg",
+  "port": true,
+  "fav": false,
+  "real": true,
+  "png": "sothebys_miranda.png"
+ },
+ {
+  "fam": "08_tropical",
+  "file": "fav_carmen-miranda-fruit-hat-platform-1940s.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "v5_02_canelita-versace-baroque-chaqueta.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_canelita.png"
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "10_filip-custic-rosalia-el-mal-querer-artwo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "v5_01_cher-bob-mackie-tocado-plumas.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "07_glam_electrico",
+  "file": "fav_david-bowie-ziggy-stardust-kansai-yamamo.jpg",
+  "port": false,
+  "fav": false,
+  "real": false
+ },
+ {
+  "fam": "09_dandi_maximalista",
+  "file": "v6_01_westwood-pirate-runway-1981-bn.jpg",
+  "port": false,
+  "fav": true,
+  "real": false
+ },
+ {
+  "fam": "02_barroco_gitano",
+  "file": "v6_01_flamenco-retrato-bn-anillos.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_flamenco_plata.png"
+ }
+]

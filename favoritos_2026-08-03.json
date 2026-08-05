@@ -1,0 +1,45 @@
+{
+ "proyecto": "cosecha26_tablon_marcas",
+ "items": [
+  {
+   "familia": "12_y2k_hyperpop",
+   "archivo": "fav_sophie-musician-chrome-aesthetic.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "16_congo_portobelo",
+   "archivo": "fav_diablo-congo-mascara-roja.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "02_barroco_gitano",
+   "archivo": "v5_01_camaron-de-la-isla-camisa-floral-oros.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "02_barroco_gitano",
+   "archivo": "v5_02_canelita-versace-baroque-chaqueta.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "08_tropical",
+   "archivo": "v5_01_brazil-funk-baroque-neon-dragones.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "09_dandi_maximalista",
+   "archivo": "v5_01_joaquin-sabina-bombin-rayas-dandi.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "12_y2k_hyperpop",
+   "archivo": "v5_01_playboi-carti-gen-z-glam-stripes.jpg",
+   "estado": "favorito_nuevo"
+  },
+  {
+   "familia": "12_y2k_hyperpop",
+   "archivo": "v5_02_new-romantic-gen-z-bomber-blanco.jpg",
+   "estado": "favorito_nuevo"
+  }
+ ]
+}

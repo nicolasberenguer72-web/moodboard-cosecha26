@@ -1,0 +1,140 @@
+<title>La Cosecha 26 — Moodboard</title>
+<style>
+:root{ --tinta:#0b0806; --rosa:#cd84c4; --oro:#dcb15f; --fuera:#b85843; }
+html{background:var(--tinta)}
+body{margin:0;background:radial-gradient(130% 90% at 50% 0%, #171008 0%, #070502 80%)}
+.tablon{max-width:1600px;margin:0 auto;padding:14px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,44vw),1fr));
+  grid-auto-rows:8px;grid-auto-flow:dense;gap:10px}
+.pieza{position:relative;border-radius:6px;overflow:hidden;background:#0d0a07;
+  box-shadow:0 4px 18px rgba(0,0,0,.5);transition:transform .18s, box-shadow .18s, opacity .35s}
+.pieza:hover{transform:translateY(-2px) scale(1.012);box-shadow:0 10px 30px rgba(0,0,0,.7);z-index:2}
+.pieza img{width:100%;height:100%;object-fit:cover;display:block}
+.pieza.out{opacity:0;transform:scale(.85);pointer-events:none}
+.bt{position:absolute;top:8px;width:34px;height:34px;border-radius:50%;
+  border:none;cursor:pointer;display:grid;place-items:center;font-size:16px;line-height:1;
+  background:rgba(11,8,6,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  opacity:0;transition:opacity .15s, background .15s;color:#f3ece3}
+.pieza:hover .bt{opacity:1}
+.bt.x{right:8px}
+.bt.f{right:48px}
+.bt.f:hover{background:#dcb15f;color:#2a1a06}
+.pieza.marcada{box-shadow:0 0 0 3px #dcb15f, 0 6px 22px rgba(0,0,0,.55)}
+.pieza.marcada .bt.f{opacity:1;background:#dcb15f;color:#2a1a06}
+.bt.x:hover{background:var(--fuera)}
+.flash{position:fixed;inset:0;pointer-events:none;z-index:9;
+  box-shadow:inset 0 0 0 4px var(--rosa);opacity:0;transition:opacity .4s}
+.flash.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.pieza,.bt,.flash{transition:none}}
+</style>
+<div class="tablon" id="tablon"></div>
+<div class="flash" id="flash"></div>
+<button id="sync" aria-label="guardar cambios" style="position:fixed;bottom:22px;right:22px;z-index:15;
+ display:none;align-items:center;gap:7px;background:#cd84c4;color:#2a0a22;border:none;border-radius:999px;
+ padding:12px 16px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5);
+ font-family:system-ui"><span id="syncN"></span> ⤓</button>
+<script>
+const DATA = __DATA__;
+const LSKEY = "cosecha26_tablon_v1";
+let marcas = {};
+try { marcas = JSON.parse(localStorage.getItem(LSKEY) || "{}"); } catch(e) {}
+const key = d => d.fam + "/" + d.file;
+const guardar = () => localStorage.setItem(LSKEY, JSON.stringify(marcas));
+
+
+const ROW = 8, GAP = 10;
+const tablon = document.getElementById("tablon");
+
+function pinta(){
+  tablon.innerHTML = "";
+  const cols = getComputedStyle(tablon).gridTemplateColumns.split(" ").length;
+  const colW = (tablon.clientWidth - 28 - GAP * (cols - 1)) / cols;
+  DATA.forEach(d => {
+    const m = marcas[key(d)] || {};
+    if (m.fuera) return;
+    const port = d.port;
+    const span = Math.min(d.span, cols);
+    const wpx = span * colW + (span - 1) * GAP;
+    const hpx = wpx * d.h / d.w;
+    const rows = Math.max(6, Math.ceil((hpx + GAP) / (ROW + GAP)));
+    const el = document.createElement("div");
+    el.className = "pieza" + (port ? " port" : "") + (d.real ? " real" : "") + ((m.fav) ? " marcada" : "");
+    el.style.gridColumn = "span " + span;
+    el.style.gridRow = "span " + rows;
+    const img = document.createElement("img");
+    img.src = d.src; img.alt = ""; img.loading = "lazy"; img.draggable = false;
+    el.appendChild(img);
+    const bf = document.createElement("button");
+    bf.className = "bt f"; bf.textContent = "★"; bf.setAttribute("aria-label", "favorito");
+    bf.onclick = e => { e.stopPropagation();
+      const cur = marcas[key(d)] || {};
+      cur.fav = !cur.fav; marcas[key(d)] = cur; guardar(); pinta(); };
+    el.appendChild(bf);
+    const bx = document.createElement("button");
+    bx.className = "bt x"; bx.textContent = "✕"; bx.setAttribute("aria-label", "quitar");
+    bx.onclick = e => { e.stopPropagation();
+      el.classList.add("out");
+      const cur = marcas[key(d)] || {}; cur.fuera = true;
+      marcas[key(d)] = cur; guardar();
+      setTimeout(pinta, 360); };
+    el.appendChild(bx);
+    tablon.appendChild(el);
+  });
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "e" || e.key === "E"){
+    const out = DATA.map(d => {
+      const m = marcas[key(d)] || {};
+      return { familia: d.fam, archivo: d.file,
+               estado: m.fuera ? "fuera" : (d.port ? "portada" : "dentro") };
+    });
+    navigator.clipboard.writeText(JSON.stringify(
+      { proyecto: "cosecha26_tablon", items: out }, null, 1));
+    const fl = document.getElementById("flash");
+    fl.classList.add("on"); setTimeout(() => fl.classList.remove("on"), 700);
+  }
+  if (e.key === "r" || e.key === "R"){
+    marcas = {}; guardar(); pinta();
+  }
+});
+function exportJson(){
+  const out = [];
+  DATA.forEach(d => {
+    const m2 = marcas[key(d)] || {};
+    if (m2.fuera) out.push({familia: d.fam, archivo: d.file, estado: "fuera"});
+    else if (m2.fav) out.push({familia: d.fam, archivo: d.file, estado: "favorito_nuevo"});
+  });
+  return JSON.stringify({proyecto: "cosecha26_tablon_marcas", items: out}, null, 1);
+}
+function actualizaSync(){
+  const nf = DATA.filter(d => (marcas[key(d)]||{}).fuera).length;
+  const nv = DATA.filter(d => (marcas[key(d)]||{}).fav && !(marcas[key(d)]||{}).fuera).length;
+  const b = document.getElementById("sync");
+  document.getElementById("syncN").textContent = (nv ? "★" + nv + " " : "") + (nf ? "✕" + nf : "");
+  b.style.display = (nf + nv) ? "flex" : "none";
+}
+document.getElementById("sync").onclick = () => {
+  const j = exportJson();
+  const fl = document.getElementById("flash");
+  const listo = () => { fl.classList.add("on"); setTimeout(() => fl.classList.remove("on"), 700); };
+  navigator.clipboard.writeText(j).then(listo).catch(() => {});
+  if (window.claude && window.claude.downloads) {
+    window.claude.downloads.save({filename: "marcas_moodboard.json", data: j}).then(listo).catch(() => {});
+  }
+};
+const _pinta0 = pinta;
+pinta = function(){ _pinta0(); actualizaSync(); };
+let rt, lastW = document.documentElement.clientWidth;
+window.addEventListener("resize", () => {
+  const w = document.documentElement.clientWidth;   // viewport de layout: ignora pinch-zoom y barra Safari
+  if (w === lastW) return;
+  lastW = w;
+  clearTimeout(rt); rt = setTimeout(() => {
+    const y = window.scrollY;
+    pinta();
+    window.scrollTo(0, y);
+  }, 120);
+});
+pinta();
+</script>
