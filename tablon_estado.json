@@ -733,6 +733,14 @@
   "png": "real_hendrix.png"
  },
  {
+  "fam": "09_dandi_maximalista",
+  "file": "v6_03_vivienne-punk-closeup-oval.jpg",
+  "port": false,
+  "fav": true,
+  "real": true,
+  "png": "real_vivienne_oval.png"
+ },
+ {
   "fam": "14_carnaval",
   "file": "g_ninos-disfrazados-calle.jpg",
   "port": false,
