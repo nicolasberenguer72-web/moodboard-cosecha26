@@ -1,8 +1,14 @@
 # Moodboard La Cosecha 26 — manual de operación
 
-Repo compartido Nicolás ↔ Gaspar. Cada uno trabaja con su Claude Code; el tablón
-público se sirve en **https://moodboard-cosecha26.vercel.app** y se actualiza al
-hacer push a `main` (integración GitHub→Vercel).
+Repo compartido Nicolás ↔ Gaspar. El tablón público se sirve en DOS dominios
+espejo, ambos conectados a este repo (un push actualiza los dos):
+- **https://moodboard-cosecha26.vercel.app**
+- **https://cosecha26-moodboard.vercel.app** (la que usa Gaspar)
+
+Las marcas ✕/★ del tablón se guardan en el `localStorage` del navegador de cada
+uno, POR DOMINIO. No viajan solas: hay que pulsar el botón flotante para
+exportarlas y pasarlas al otro. Nunca cambies `LSKEY` ni renombres archivos ya
+publicados: rompería las marcas que la gente tenga sin exportar.
 
 ## Qué es cada cosa
 
