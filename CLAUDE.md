@@ -22,10 +22,14 @@ publicados: rompería las marcas que la gente tenga sin exportar.
 - `marcos_fuente/` — fotos de catálogo de los marcos en bruto, con prefijo de
   procedencia (ansorena__, segre__, sothebys__, bada__, anticstore__, nbn__).
 - `marcos_procedencia.json` — qué lote de qué casa es cada marco, con medidas.
-- `moodboard_cosecha26.html` — el tablón compilado (autocontenido, NO editar a
-  mano: se regenera).
-- `_tools/` — las herramientas. `plantilla_tablon.html` es la única fuente de
-  verdad del diseño.
+- `index.html` — la página PÚBLICA (la que ve la gente desde la invitación):
+  solo fotos, scroll y zoom, sin controles. NO editar a mano: se regenera.
+- `editor.html` — la página PRIVADA para Nicolás y Gaspar, idéntica pero con
+  ✕, ★ y el exportador. Está en la misma web: añade /editor.html a la URL.
+- `img/` — las fotos ya optimizadas como archivos sueltos (carga progresiva).
+  Se regeneran solas; los `.md5` evitan reescribir las que no han cambiado.
+- `_tools/` — las herramientas. `plantilla_publica.html` (diseño de la pública) y
+  `plantilla_tablon.html` (diseño del editor) son las fuentes de verdad.
 - `criba_*.json`, `favoritos_*.json`, `pendientes_enmarcar.json` — histórico de
   decisiones y cola de favoritos esperando marco.
 
