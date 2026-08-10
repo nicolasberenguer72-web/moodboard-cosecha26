@@ -64,13 +64,6 @@
   "real": false
  },
  {
-  "fam": "04_movida_almodovar",
-  "file": "g_tino-casal-estudio-figuras.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
   "fam": "11_cantopop_hk",
   "file": "v4_02_anita-mui-bad-girl-stage-costume.jpg",
   "port": false,
@@ -166,8 +159,9 @@
   "fam": "05_dictador_chic",
   "file": "v4_02_mobutu-leopard-skin-hat-portrait.jpg",
   "port": false,
-  "fav": false,
-  "real": false
+  "fav": true,
+  "real": true,
+  "png": "real_ripple_mobutu.png"
  },
  {
   "fam": "07_glam_electrico",
@@ -420,14 +414,6 @@
   "real": false
  },
  {
-  "fam": "12_y2k_hyperpop",
-  "file": "v5_01_playboi-carti-gen-z-glam-stripes.jpg",
-  "port": false,
-  "fav": true,
-  "real": true,
-  "png": "real_carti.png"
- },
- {
   "fam": "09_dandi_maximalista",
   "file": "g_senora-estampados-calle.jpg",
   "port": false,
@@ -526,8 +512,9 @@
   "fam": "12_y2k_hyperpop",
   "file": "g_supermercado-piel-body.jpg",
   "port": false,
-  "fav": false,
-  "real": false
+  "fav": true,
+  "real": true,
+  "png": "real_ans409_supermercado.png"
  },
  {
   "fam": "03_goyesco_semana_santa",
@@ -629,14 +616,6 @@
   "port": false,
   "fav": false,
   "real": false
- },
- {
-  "fam": "04_movida_almodovar",
-  "file": "06_alberto-garcia-alix-retrato-movida-madri.jpg",
-  "port": true,
-  "fav": false,
-  "real": true,
-  "png": "real_garcia-alix.png"
  },
  {
   "fam": "04_movida_almodovar",
@@ -942,13 +921,6 @@
   "real": false
  },
  {
-  "fam": "06_mafia_flamboyante",
-  "file": "fav_roberto-cavalli-campana-floral.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
   "fam": "17_club_kids",
   "file": "g_sombrero-negro-plumas-moradas.jpg",
   "port": false,
@@ -973,8 +945,9 @@
   "fam": "18_harajuku",
   "file": "g_cara-gigante-camiseta.jpg",
   "port": false,
-  "fav": false,
-  "real": false
+  "fav": true,
+  "real": true,
+  "png": "real_camafeo_cara.png"
  },
  {
   "fam": "11_cantopop_hk",
@@ -993,20 +966,6 @@
  {
   "fam": "18_harajuku",
   "file": "g_harajuku-abrigo-floral.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
-  "fam": "02_barroco_gitano",
-  "file": "05_colita-fotografia-flamenco-lola-flores.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
-  "fam": "02_barroco_gitano",
-  "file": "03_ruven-afanador-mil-besos-flamenco-photog.jpg",
   "port": false,
   "fav": false,
   "real": false
@@ -1204,13 +1163,6 @@
   "real": false
  },
  {
-  "fam": "03_goyesco_semana_santa",
-  "file": "15_goya-maja-vestida-prado-painting.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
   "fam": "01_corte_y_jardin",
   "file": "v5_01_infanta-isabel-clara-eugenia-magdalena-ruiz.jpg",
   "port": false,
@@ -1341,14 +1293,6 @@
  },
  {
   "fam": "04_movida_almodovar",
-  "file": "02_ouka-leele-fotografia-coloreada-limon.jpg",
-  "port": true,
-  "fav": false,
-  "real": true,
-  "png": "marco409.png"
- },
- {
-  "fam": "04_movida_almodovar",
   "file": "08_pablo-perez-minguez-fotografia-movida-al.jpg",
   "port": false,
   "fav": false,
@@ -1360,21 +1304,6 @@
   "port": false,
   "fav": false,
   "real": false
- },
- {
-  "fam": "09_dandi_maximalista",
-  "file": "fav_gucci-michele-campaign-perros.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
-  "fam": "09_dandi_maximalista",
-  "file": "fav_julian-schnabel-dandi-pintor.jpg",
-  "port": true,
-  "fav": false,
-  "real": true,
-  "png": "real_schnabel.png"
  },
  {
   "fam": "20_bestiario_gala",
@@ -1389,21 +1318,6 @@
   "port": false,
   "fav": false,
   "real": false
- },
- {
-  "fam": "06_mafia_flamboyante",
-  "file": "06_richard-avedon-versace-campaign-1990s.jpg",
-  "port": false,
-  "fav": false,
-  "real": false
- },
- {
-  "fam": "08_tropical",
-  "file": "08_carmen-miranda-1940s-studio-portrait.jpg",
-  "port": true,
-  "fav": false,
-  "real": true,
-  "png": "sothebys_miranda.png"
  },
  {
   "fam": "20_bestiario_gala",

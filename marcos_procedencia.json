@@ -257,5 +257,32 @@
   "marco": "nbn__plata_repujada_viv_1600.jpg",
   "nota": "misma máscara v10; marco prescalado 0.487 a foto 336px; sustituye a vivienne plumas en la plata (04-ago)",
   "render": "real_flamenco_plata.png"
+ },
+ {
+  "foto": "cara gigante camiseta (harajuku)",
+  "casa": "sothebys",
+  "lote": "antique victorian silver jeweled frame",
+  "titulo": "Camafeo victoriano de plata con orla de pedreria",
+  "medidas": "4x3 in / 10,16x7,62 cm",
+  "fuente_px": 4096,
+  "nota": "heredado de Carmen Miranda (retirada 10-ago)"
+ },
+ {
+  "foto": "supermercado piel body (y2k)",
+  "casa": "ansorena",
+  "lote": "409",
+  "titulo": "Marco, Espana, S. XIX - talla dorada",
+  "medidas": "luz 123x91,5 cm",
+  "fuente_px": 2430,
+  "nota": "heredado de Ouka Leele (retirada 10-ago)"
+ },
+ {
+  "foto": "mobutu gorro leopardo (dictador chic)",
+  "casa": "sothebys",
+  "lote": "flemish baroque ebony wave ripple",
+  "titulo": "Marco flamenco de ebano con molduras de onda, S. XVII",
+  "medidas": "129x112 cm",
+  "fuente_px": 1790,
+  "nota": "heredado de Garcia-Alix (retirada 10-ago); girado a horizontal"
  }
 ]
