@@ -82,6 +82,7 @@ function pinta(){
   while (i < vivos.length){
     const destaca = vivos[i].real || (marcas[key(vivos[i])] || {}).fav;
     const objetivo = base * VAR[nf % VAR.length] * (destaca ? 1.55 : 1);
+    const maxFila = W < 700 ? 3 : 99;          // movil: nunca mas de 3 por fila
     const fila = []; let sumA = 0, h = 0;
     while (i < vivos.length){
       const d = vivos[i];
@@ -89,7 +90,7 @@ function pinta(){
       h = (W - G * (fila.length - 1)) / sumA;
       // tope de resolucion: nunca mostrar por encima del alto real embebido
       const tope = Math.min(objetivo, Math.min.apply(null, fila.map(x => x.h)));
-      if (h <= tope) break;
+      if (h <= tope || fila.length >= maxFila) break;
     }
     const ultima = i >= vivos.length;
     let alt = (W - G * (fila.length - 1)) / sumA;
