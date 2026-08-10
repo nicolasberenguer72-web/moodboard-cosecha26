@@ -3,14 +3,13 @@
 :root{ --tinta:#0b0806; --rosa:#cd84c4; --oro:#dcb15f; --fuera:#b85843; }
 html{background:var(--tinta)}
 body{margin:0;background:radial-gradient(130% 90% at 50% 0%, #171008 0%, #070502 80%)}
-.tablon{max-width:900px;margin:0 auto;padding:6px}
-.fila{display:flex;gap:4px;margin-bottom:4px}
-@media(min-width:700px){.tablon{padding:10px}.fila{gap:6px;margin-bottom:6px}}
-.pieza{position:relative;border-radius:3px;flex:0 0 auto;overflow:hidden;background:#0d0a07;
+.tablon{max-width:1600px;margin:0 auto;padding:14px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,44vw),1fr));
+  grid-auto-rows:8px;grid-auto-flow:dense;gap:10px}
+.pieza{position:relative;border-radius:6px;overflow:hidden;background:#0d0a07;
   box-shadow:0 4px 18px rgba(0,0,0,.5);transition:transform .18s, box-shadow .18s, opacity .35s}
 .pieza:hover{transform:translateY(-2px) scale(1.012);box-shadow:0 10px 30px rgba(0,0,0,.7);z-index:2}
 .pieza img{width:100%;height:100%;object-fit:cover;display:block}
-.pieza.real img{object-fit:contain}
 .pieza.out{opacity:0;transform:scale(.85);pointer-events:none}
 .bt{position:absolute;top:8px;width:34px;height:34px;border-radius:50%;
   border:none;cursor:pointer;display:grid;place-items:center;font-size:16px;line-height:1;
@@ -73,70 +72,40 @@ const tablon = document.getElementById("tablon");
 
 function pinta(){
   tablon.innerHTML = "";
-  const W = tablon.clientWidth - (window.innerWidth >= 700 ? 20 : 12);
-  const G = window.innerWidth >= 700 ? 6 : 4;
-  const base = W < 520 ? 168 : (W < 900 ? 210 : 260);
-  const vivos = DATA.filter(d => !(marcas[key(d)] || {}).fuera);
-  const VAR = [1, 1.5, 0.8, 1.25, 0.92, 1.7, 0.85, 1.35];
-  let i = 0, nf = 0;
-  while (i < vivos.length){
-    const destaca = vivos[i].real || (marcas[key(vivos[i])] || {}).fav;
-    const objetivo = base * VAR[nf % VAR.length] * (destaca ? 1.55 : 1);
-    // movil: ritmo fijado por patron (mayoria a foto unica, alguna pareja, rara vez tres)
-    const PAT = [1,1,2,1,1,3,1,2,1,1,2,1,1,1,2,1,3,1,1,2];
-    const movil = W < 700;
-    let maxFila = movil ? (vivos[i].real ? 1 : PAT[nf % PAT.length]) : 4;
-    // guardian de resolucion: una foto pequena nunca va sola a pantalla completa
-    if (movil && maxFila === 1 && vivos[i].w < W * 0.92) maxFila = 2;
-    if (movil && maxFila === 2 && vivos[i].w < W * 0.44) maxFila = 3;
-    const fila = []; let sumA = 0, h = 0;
-    while (i < vivos.length){
-      const d = vivos[i];
-      fila.push(d); sumA += d.w / d.h; i++;
-      h = (W - G * (fila.length - 1)) / sumA;
-      // tope de resolucion: nunca mostrar por encima del alto real embebido
-      const tope = Math.min(objetivo, Math.min.apply(null, fila.map(x => x.h)));
-      if (h <= tope || fila.length >= maxFila) break;
-    }
-    const ultima = i >= vivos.length;
-    let alt = (W - G * (fila.length - 1)) / sumA;
-    const techo = Math.min.apply(null, fila.map(x => x.h)) * 1.04;
-    if (alt > techo) alt = techo;                       // sin pixelado
-    if (ultima && alt > objetivo * 1.6) alt = objetivo; // ultima fila corta: no la infles
-    const row = document.createElement("div");
-    row.className = "fila";
-    fila.forEach(d => {
-      const m = marcas[key(d)] || {};
-      const el = document.createElement("div");
-      el.className = "pieza" + (d.port ? " port" : "") + (d.real ? " real" : "") + (m.fav ? " marcada" : "");
-      el.style.width = Math.round(alt * d.w / d.h) + "px";
-      el.style.height = Math.round(alt) + "px";
-      const img = document.createElement("img");
-      img.src = d.src; img.alt = ""; img.loading = "lazy"; img.draggable = false;
-      el.appendChild(img);
-      const bf = document.createElement("button");
+  const cols = getComputedStyle(tablon).gridTemplateColumns.split(" ").length;
+  const colW = (tablon.clientWidth - 28 - GAP * (cols - 1)) / cols;
+  DATA.forEach(d => {
+    const m = marcas[key(d)] || {};
+    if (m.fuera) return;
+    const port = d.port;
+    const span = Math.min(d.span, cols);
+    const wpx = span * colW + (span - 1) * GAP;
+    const hpx = wpx * d.h / d.w;
+    const rows = Math.max(6, Math.ceil((hpx + GAP) / (ROW + GAP)));
+    const el = document.createElement("div");
+    el.className = "pieza" + (port ? " port" : "") + (d.real ? " real" : "") + ((m.fav) ? " marcada" : "");
+    el.style.gridColumn = "span " + span;
+    el.style.gridRow = "span " + rows;
+    const img = document.createElement("img");
+    img.src = d.src; img.alt = ""; img.loading = "lazy"; img.draggable = false;
+    el.appendChild(img);
+    const bf = document.createElement("button");
     bf.className = "bt f"; bf.textContent = "★"; bf.setAttribute("aria-label", "favorito");
     bf.onclick = e => { e.stopPropagation();
       const cur = marcas[key(d)] || {};
       cur.fav = !cur.fav; marcas[key(d)] = cur; guardar(); pinta(); };
-      el.appendChild(bf);
-      const bx = document.createElement("button");
+    el.appendChild(bf);
+    const bx = document.createElement("button");
     bx.className = "bt x"; bx.textContent = "✕"; bx.setAttribute("aria-label", "quitar");
     bx.onclick = e => { e.stopPropagation();
       el.classList.add("out");
       const cur = marcas[key(d)] || {}; cur.fuera = true;
       marcas[key(d)] = cur; guardar();
       setTimeout(pinta, 360); };
-      el.appendChild(bx);
-      row.appendChild(el);
-    });
-    tablon.appendChild(row);
-    nf++;
-  }
-  actualizaSync();
+    el.appendChild(bx);
+    tablon.appendChild(el);
+  });
 }
-
-
 
 document.addEventListener("keydown", e => {
   if (e.key === "e" || e.key === "E"){
@@ -194,6 +163,8 @@ document.getElementById("expoCopy").onclick = () => {
 };
 document.getElementById("expoClose").onclick = () => document.getElementById("expo").classList.remove("on");
 document.getElementById("expo").onclick = e => { if (e.target.id === "expo") e.currentTarget.classList.remove("on"); };
+const _pinta0 = pinta;
+pinta = function(){ _pinta0(); actualizaSync(); };
 let rt, lastW = document.documentElement.clientWidth;
 window.addEventListener("resize", () => {
   const w = document.documentElement.clientWidth;   // viewport de layout: ignora pinch-zoom y barra Safari
