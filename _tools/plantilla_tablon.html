@@ -3,7 +3,7 @@
 :root{ --tinta:#0b0806; --rosa:#cd84c4; --oro:#dcb15f; --fuera:#b85843; }
 html{background:var(--tinta)}
 body{margin:0;background:radial-gradient(130% 90% at 50% 0%, #171008 0%, #070502 80%)}
-.tablon{max-width:1600px;margin:0 auto;padding:6px}
+.tablon{max-width:900px;margin:0 auto;padding:6px}
 .fila{display:flex;gap:4px;margin-bottom:4px}
 @media(min-width:700px){.tablon{padding:10px}.fila{gap:6px;margin-bottom:6px}}
 .pieza{position:relative;border-radius:3px;flex:0 0 auto;overflow:hidden;background:#0d0a07;
@@ -82,7 +82,7 @@ function pinta(){
   while (i < vivos.length){
     const destaca = vivos[i].real || (marcas[key(vivos[i])] || {}).fav;
     const objetivo = base * VAR[nf % VAR.length] * (destaca ? 1.55 : 1);
-    const maxFila = W < 700 ? 3 : 99;          // movil: nunca mas de 3 por fila
+    const maxFila = W < 700 ? 3 : 4;            // movil 3, escritorio 4
     const fila = []; let sumA = 0, h = 0;
     while (i < vivos.length){
       const d = vivos[i];
