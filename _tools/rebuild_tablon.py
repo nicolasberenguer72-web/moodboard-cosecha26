@@ -104,8 +104,11 @@ for ini, fin in [("/*<editor>*/", "/*</editor>*/"),
         publica = publica[:a] + publica[b:]
 if "<editor>" in publica:
     raise SystemExit("ERROR: quedan marcas de editor sin cerrar en la publica")
+# OJO: sin etiqueta viewport a proposito. El movil maqueta a ~980px como una
+# pagina de escritorio, que es lo que da el mosaico de fotos pequenas mezcladas
+# con grandes; el pellizco para ampliar sigue funcionando. Poner
+# width=device-width deja 2 columnas y las fotos salen una debajo de otra.
 cabecera = ('<meta charset="utf-8">\n'
-            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
             '<meta name="theme-color" content="#0b0806">\n'
             '<meta name="robots" content="noindex">\n')
 publica = cabecera + publica.replace("<title>La Cosecha 26 — Moodboard</title>",
