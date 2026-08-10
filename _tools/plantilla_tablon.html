@@ -22,6 +22,20 @@ body{margin:0;background:radial-gradient(130% 90% at 50% 0%, #171008 0%, #070502
 .pieza.marcada{box-shadow:0 0 0 3px #dcb15f, 0 6px 22px rgba(0,0,0,.55)}
 .pieza.marcada .bt.f{opacity:1;background:#dcb15f;color:#2a1a06}
 .bt.x:hover{background:var(--fuera)}
+.expo{position:fixed;inset:0;z-index:20;display:none;place-items:center;background:rgba(5,3,2,.88)}
+.expo.on{display:grid}
+.expo-caja{width:min(560px,92vw);background:#161009;border:1px solid #2b2118;border-radius:14px;padding:20px;
+  font-family:system-ui,sans-serif;color:#f3ece3}
+.expo-caja h3{margin:0 0 4px;font-size:17px;font-weight:600;color:#cd84c4}
+.expo-caja p{margin:0 0 12px;font-size:13px;color:#a3958a;line-height:1.45}
+.expo-caja textarea{width:100%;height:120px;background:#0d0a07;border:1px solid #2b2118;border-radius:8px;
+  color:#f3ece3;font-family:ui-monospace,monospace;font-size:11px;padding:8px;resize:vertical}
+.expo-acc{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.expo-acc button,.expo-acc a{flex:1 1 auto;border:1px solid #2b2118;background:transparent;color:#f3ece3;
+  border-radius:999px;padding:10px 14px;font-size:14px;cursor:pointer;text-align:center;text-decoration:none;
+  font-family:inherit}
+.expo-acc .pri{background:#cd84c4;border-color:#cd84c4;color:#2a0a22;font-weight:700}
+.expo-acc .wa{background:#25d366;border-color:#25d366;color:#04310f;font-weight:700}
 .flash{position:fixed;inset:0;pointer-events:none;z-index:9;
   box-shadow:inset 0 0 0 4px var(--rosa);opacity:0;transition:opacity .4s}
 .flash.on{opacity:1}
@@ -29,6 +43,17 @@ body{margin:0;background:radial-gradient(130% 90% at 50% 0%, #171008 0%, #070502
 </style>
 <div class="tablon" id="tablon"></div>
 <div class="flash" id="flash"></div>
+<div class="expo" id="expo"><div class="expo-caja">
+  <h3 id="expoTit"></h3>
+  <p>Mándaselo a Nico: descarga el archivo, o pulsa WhatsApp, o copia el texto de abajo y pégalo en el chat.</p>
+  <textarea id="expoTxt" readonly onclick="this.select()"></textarea>
+  <div class="expo-acc">
+    <button class="pri" id="expoDown">Descargar archivo</button>
+    <a class="wa" id="expoWa" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+    <button id="expoCopy">Copiar</button>
+    <button id="expoClose">Cerrar</button>
+  </div>
+</div></div>
 <button id="sync" aria-label="guardar cambios" style="position:fixed;bottom:22px;right:22px;z-index:15;
  display:none;align-items:center;gap:7px;background:#cd84c4;color:#2a0a22;border:none;border-radius:999px;
  padding:12px 16px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5);
@@ -116,13 +141,28 @@ function actualizaSync(){
 }
 document.getElementById("sync").onclick = () => {
   const j = exportJson();
-  const fl = document.getElementById("flash");
-  const listo = () => { fl.classList.add("on"); setTimeout(() => fl.classList.remove("on"), 700); };
-  navigator.clipboard.writeText(j).then(listo).catch(() => {});
-  if (window.claude && window.claude.downloads) {
-    window.claude.downloads.save({filename: "marcas_moodboard.json", data: j}).then(listo).catch(() => {});
-  }
+  const n = JSON.parse(j).items.length;
+  document.getElementById("expoTit").textContent = n + (n === 1 ? " foto marcada" : " fotos marcadas");
+  document.getElementById("expoTxt").value = j;
+  document.getElementById("expoWa").href = "https://wa.me/?text=" + encodeURIComponent("Moodboard La Cosecha - cambios:\n" + j);
+  document.getElementById("expo").classList.add("on");
+  navigator.clipboard && navigator.clipboard.writeText(j).catch(() => {});
 };
+document.getElementById("expoDown").onclick = () => {
+  const j = document.getElementById("expoTxt").value;
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([j], {type: "application/json"}));
+  a.download = "marcas_moodboard.json";
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+};
+document.getElementById("expoCopy").onclick = () => {
+  const t = document.getElementById("expoTxt"); t.select();
+  try { document.execCommand("copy"); } catch(e) {}
+  if (navigator.clipboard) navigator.clipboard.writeText(t.value).catch(() => {});
+};
+document.getElementById("expoClose").onclick = () => document.getElementById("expo").classList.remove("on");
+document.getElementById("expo").onclick = e => { if (e.target.id === "expo") e.currentTarget.classList.remove("on"); };
 const _pinta0 = pinta;
 pinta = function(){ _pinta0(); actualizaSync(); };
 let rt, lastW = document.documentElement.clientWidth;
