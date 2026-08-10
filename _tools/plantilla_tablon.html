@@ -82,7 +82,13 @@ function pinta(){
   while (i < vivos.length){
     const destaca = vivos[i].real || (marcas[key(vivos[i])] || {}).fav;
     const objetivo = base * VAR[nf % VAR.length] * (destaca ? 1.55 : 1);
-    const maxFila = W < 700 ? 3 : 4;            // movil 3, escritorio 4
+    // movil: ritmo fijado por patron (mayoria a foto unica, alguna pareja, rara vez tres)
+    const PAT = [1,1,2,1,1,3,1,2,1,1,2,1,1,1,2,1,3,1,1,2];
+    const movil = W < 700;
+    let maxFila = movil ? (vivos[i].real ? 1 : PAT[nf % PAT.length]) : 4;
+    // guardian de resolucion: una foto pequena nunca va sola a pantalla completa
+    if (movil && maxFila === 1 && vivos[i].w < W * 0.92) maxFila = 2;
+    if (movil && maxFila === 2 && vivos[i].w < W * 0.44) maxFila = 3;
     const fila = []; let sumA = 0, h = 0;
     while (i < vivos.length){
       const d = vivos[i];
@@ -94,7 +100,7 @@ function pinta(){
     }
     const ultima = i >= vivos.length;
     let alt = (W - G * (fila.length - 1)) / sumA;
-    const techo = Math.min.apply(null, fila.map(x => x.h)) * 1.12;
+    const techo = Math.min.apply(null, fila.map(x => x.h)) * 1.04;
     if (alt > techo) alt = techo;                       // sin pixelado
     if (ultima && alt > objetivo * 1.6) alt = objetivo; // ultima fila corta: no la infles
     const row = document.createElement("div");

@@ -51,13 +51,13 @@ for e in estado:
         p = os.path.join(FOTOS, e["fam"], e["file"])
         im = Image.open(p).convert("RGB")
         W, H = im.size
+        # la maquetacion es de filas justificadas: la foto se sirve a la maxima
+        # resolucion util (ancho de pantalla movil), nunca por debajo de su fuente
         span = 4 if e.get("port") else (3 if e.get("fav") else 2)
-        if not e.get("port") and W >= 1600: span += 1
-        span = max(2, min(span, max(2, W // 230), 5))
-        tw = min(W, span * 200, 820)
+        tw = min(W, 700)
         im.thumbnail((tw, tw * 4))
-        buf = io.BytesIO(); im.save(buf, "JPEG", quality=55, optimize=True)
-        src = "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+        buf = io.BytesIO(); im.save(buf, "WEBP", quality=55, method=6)
+        src = "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
     items.append({"fam": e["fam"], "file": e["file"], "w": im.width, "h": im.height,
                   "span": span, "port": e.get("port", False), "fav": e.get("fav", False),
                   "real": e.get("real", False), "src": src})
