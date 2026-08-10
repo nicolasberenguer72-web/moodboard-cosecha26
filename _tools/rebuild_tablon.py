@@ -91,12 +91,29 @@ for f in os.listdir(IMG):
         os.remove(os.path.join(IMG, f)); huerfanas += 1
 
 datos = json.dumps(items)
-for plantilla, salida in [("plantilla_publica.html", "index.html"),
-                          ("plantilla_tablon.html", "editor.html")]:
-    p = os.path.join(BASE, "_tools", plantilla)
-    if not os.path.exists(p):
-        continue
-    open(os.path.join(BASE, salida), "w").write(open(p).read().replace("__DATA__", datos))
+plantilla = open(os.path.join(BASE, "_tools", "plantilla_tablon.html")).read()
+
+# La PUBLICA se deriva del editor quitando los bloques marcados: mismo diseno,
+# misma maquetacion, sin controles. Una sola fuente de verdad.
+publica = plantilla
+for ini, fin in [("/*<editor>*/", "/*</editor>*/"),
+                 ("<!--<editor>-->", "<!--</editor>-->"),
+                 ("//<editor>", "//</editor>")]:
+    while ini in publica:
+        a = publica.index(ini); b = publica.index(fin, a) + len(fin)
+        publica = publica[:a] + publica[b:]
+if "<editor>" in publica:
+    raise SystemExit("ERROR: quedan marcas de editor sin cerrar en la publica")
+cabecera = ('<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+            '<meta name="theme-color" content="#0b0806">\n'
+            '<meta name="robots" content="noindex">\n')
+publica = cabecera + publica.replace("<title>La Cosecha 26 — Moodboard</title>",
+                                     "<title>La cosecha — moodboard</title>")
+publica += '\n<script defer src="/_vercel/insights/script.js"></script>\n'
+
+open(os.path.join(BASE, "index.html"), "w").write(publica.replace("__DATA__", datos))
+open(os.path.join(BASE, "editor.html"), "w").write(plantilla.replace("__DATA__", datos))
 
 json.dump(estado, open(os.path.join(BASE, "tablon_estado.json"), "w"), indent=1, ensure_ascii=False)
 peso_img = sum(os.path.getsize(os.path.join(IMG, f)) for f in os.listdir(IMG) if f.endswith(".webp"))
